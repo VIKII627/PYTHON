@@ -1,8 +1,3 @@
-#Haz un programa que pida al usuario un numero entero positivo y 
-#con bucles que pruebe con todos los numeros desde 1 hasta el suyo mismo
-#y si dicho numero es divisible solo por si mismo, es primo sino, no lo es.
-#hacer con bucle while
-
 numero = int(input("Introduce un número entero positivo: "))
 i = 1
 es_primo = True
