@@ -1,3 +1,7 @@
+#Ejercicio 10
+#Escribir un programa que pida al usuario un número entero y muestre por pantalla si
+#es un número primo o no.
+
 numero = int(input("Introduce un número entero positivo: "))
 i = 1
 es_primo = True
