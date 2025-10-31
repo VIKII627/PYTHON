@@ -8,5 +8,7 @@ telefono = input("¿Cual es su número de teléfono?: ")
 
 diccionario ['Nombre'] = nombre
 diccionario ['Edad'] = edad
-diccionario ['Dirección'] = direccion
+diccionario ['Direccion'] = direccion
 diccionario ['Teléfono'] = telefono
+
+print(f"{diccionario['Nombre']} tiene {diccionario['Edad']} años, vive en {diccionario['Direccion']} y su número de teléfono es {diccionario['Teléfono']}.")
