@@ -4,22 +4,24 @@
 #Después pedirá una frase en español y utilizará el diccionario para traducirla palabra a palabra. 
 #Si una palabra no está en el diccionario debe dejarla sin traducir. 
 
-traduccion = {}
-entrada = input("Introduce las palabras en español e inglés separadas por dos puntos, y cada par <palabra>:<traducción> separados por comas: ")
-pares = entrada.split(',')
+# Crear el diccionario de traducción
+traducciones_input = input("Introduce las palabras en español e inglés separadas por dos puntos, y cada par <palabra>:<traducción> separados por comas: ")
+traducciones_lista = traducciones_input.split(',')
+diccionario_traduccion = {}
 
-for par in pares:
-    palabra_es, palabra_en = par.split(':')
-    traduccion[palabra_es.strip()] = palabra_en.strip()
+for item in traducciones_lista:
+    palabra_es, palabra_en = item.split(':')
+    diccionario_traduccion[palabra_es.strip()] = palabra_en.strip()
 
-frase_es = input("Introduce una frase en español para traducir: ")
-palabras_es = frase_es.split()
-frase_en = []
+# Pedir una frase en español
+frase_espanol = input("Introduce una frase en español para traducir: ")
+palabras_frase = frase_espanol.split()
+frase_traducida = []
 
-for palabra in palabras_es:
-    if palabra in traduccion:
-        frase_en.append(traduccion[palabra])
-    else:
-        frase_en.append(palabra)
+# Traducir la frase palabra por palabra
+for palabra in palabras_frase:
+    traduccion = diccionario_traduccion.get(palabra, palabra)
+    frase_traducida.append(traduccion)
+frase_final = ' '.join(frase_traducida)
 
-print("Frase traducida:", ' '.join(frase_en))
+print("Frase traducida:", frase_final)
