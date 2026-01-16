@@ -4,7 +4,6 @@
 #Después pedirá una frase en español y utilizará el diccionario para traducirla palabra a palabra. 
 #Si una palabra no está en el diccionario debe dejarla sin traducir. 
 
-# Crear el diccionario de traducción
 traducciones_input = input("Introduce las palabras en español e inglés separadas por dos puntos, y cada par <palabra>:<traducción> separados por comas: ")
 traducciones_lista = traducciones_input.split(',')
 diccionario_traduccion = {}
@@ -13,12 +12,10 @@ for item in traducciones_lista:
     palabra_es, palabra_en = item.split(':')
     diccionario_traduccion[palabra_es.strip()] = palabra_en.strip()
 
-# Pedir una frase en español
 frase_espanol = input("Introduce una frase en español para traducir: ")
 palabras_frase = frase_espanol.split()
 frase_traducida = []
-
-# Traducir la frase palabra por palabra
+a
 for palabra in palabras_frase:
     traduccion = diccionario_traduccion.get(palabra, palabra)
     frase_traducida.append(traduccion)
