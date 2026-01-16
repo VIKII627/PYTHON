@@ -15,7 +15,7 @@ for item in traducciones_lista:
 frase_espanol = input("Introduce una frase en español para traducir: ")
 palabras_frase = frase_espanol.split()
 frase_traducida = []
-a
+
 for palabra in palabras_frase:
     traduccion = diccionario_traduccion.get(palabra, palabra)
     frase_traducida.append(traduccion)
